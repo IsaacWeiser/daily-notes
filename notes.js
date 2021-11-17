@@ -24,3 +24,16 @@ notes.push({id:3, subject:["push function", "arrays and objects", "for...of loop
 
 console.log("today's new knowledge: " + JSON.stringify(notes[2]))
 console.log(notes[2])
+
+// display out the notes
+// stretch goal here is to be able to add spaces and "and" to the subject section when there are multiple items
+
+for (let notation of notes) {
+    console.log (`
+    Note ${notation.id} 
+    ${notation.date}
+    I learned ${notation.subject}
+    I spent ${notation.timeSpent}Hrs working on it.
+    I felt ${notation.feeling}.
+    `)
+}
