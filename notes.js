@@ -37,3 +37,13 @@ for (let notation of notes) {
     I felt ${notation.feeling}.
     `)
 }
+
+//search for a specific note based on a feeling
+const searchTerm = "pog"
+
+for (const item of notes) {
+    if (item.feeling === searchTerm) {
+        console.log(" here's that note sir: ")
+        console.log(item)
+    }
+}
