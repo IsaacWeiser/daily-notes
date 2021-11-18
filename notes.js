@@ -47,3 +47,27 @@ for (const item of notes) {
         console.log(item)
     }
 }
+
+//add a new note using a function that auto adds  a new id
+
+const createNote = (obj) => {
+    const currentLastIndex = notes.length 
+    console.log("cli: " + currentLastIndex)
+    let newId = currentLastIndex + 1
+
+    notes.push(obj)
+    obj.id = newId
+
+    obj.date = Date()
+}
+
+let todayNote = {
+    subject: ["functions", "scope"],
+    date: '11-18-21',
+    feeling: "tired",
+    timeSpent: 4
+}
+
+createNote(todayNote)
+
+console.log(notes)
